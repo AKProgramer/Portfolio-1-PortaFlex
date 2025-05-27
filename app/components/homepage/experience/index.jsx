@@ -1,7 +1,6 @@
 // @flow strict
 'use client';
 import { usePersonalData } from '@/app/context/PersonalDataContext';
-import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
