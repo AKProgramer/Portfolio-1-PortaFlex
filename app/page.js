@@ -1,4 +1,3 @@
-"use client";
 
 import { useContext } from "react";
 import { PortfolioDataContext } from "./context/PortfolioDataContext";
@@ -18,14 +17,21 @@ export default function Home() {
   const sectionTypes = (portfolioData.sections || []).map(s => s.type);
 
   return (
-    <div suppressHydrationWarning >
-      {sectionTypes.includes("hero") && <HeroSection />}
-      {sectionTypes.includes("about") && <AboutSection />}
-      {/* {sectionTypes.includes("experience") && <Experience />} */}
-      {sectionTypes.includes("skills") && <Skills />}
-      {sectionTypes.includes("projects") && <Projects />}
-      {/* {sectionTypes.includes("education") && <Education />} */}
-      {sectionTypes.includes("contact") && <ContactSection />}
-    </div>
+    <>
+      {sectionTypes
+        ? "Hello World"
+        : (
+          <div suppressHydrationWarning>
+            {sectionTypes.includes("hero") && <HeroSection />}
+            {sectionTypes.includes("about") && <AboutSection />}
+            {/* {sectionTypes.includes("experience") && <Experience />} */}
+            {sectionTypes.includes("skills") && <Skills />}
+            {sectionTypes.includes("projects") && <Projects />}
+            {/* {sectionTypes.includes("education") && <Education />} */}
+            {sectionTypes.includes("contact") && <ContactSection />}
+          </div>
+        )
+      }
+    </>
   )
-};
+}; 
