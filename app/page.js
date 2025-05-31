@@ -21,10 +21,10 @@ export default function Home() {
     <div suppressHydrationWarning >
       {sectionTypes.includes("hero") && <HeroSection />}
       {sectionTypes.includes("about") && <AboutSection />}
-      {sectionTypes.includes("experience") && <Experience />}
+      {/* {sectionTypes.includes("experience") && <Experience />} */}
       {sectionTypes.includes("skills") && <Skills />}
       {sectionTypes.includes("projects") && <Projects />}
-      {sectionTypes.includes("education") && <Education />}
+      {/* {sectionTypes.includes("education") && <Education />} */}
       {sectionTypes.includes("contact") && <ContactSection />}
     </div>
   )
