@@ -18,20 +18,7 @@ export default function Home() {
 console.log(sectionTypes.length)
   return (
     <>
-      {sectionTypes.length
-        ? (
-          <div suppressHydrationWarning>
-            {sectionTypes.includes("hero") && <HeroSection />}
-            {sectionTypes.includes("about") && <AboutSection />}
-            {/* {sectionTypes.includes("experience") && <Experience />} */}
-            {sectionTypes.includes("skills") && <Skills />}
-            {sectionTypes.includes("projects") && <Projects />}
-            {/* {sectionTypes.includes("education") && <Education />} */}
-            {sectionTypes.includes("contact") && <ContactSection />}
-          </div>
-        )
-        : "Hello World"
-      }
+     <div><h1>Hellow Worls</h1></div>
     </>
   )
 }; 
