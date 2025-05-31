@@ -5,9 +5,7 @@ import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
-import dynamic from "next/dynamic";
-
-const GlowCard = dynamic(() => import("../../helper/glow-card"), { ssr: false });
+import GlowCard from '../../helper/glow-card';
 
 function Experience() {
   const personalData = usePersonalData();
