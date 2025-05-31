@@ -1,4 +1,4 @@
-
+"use client"
 import { useContext } from "react";
 import { PortfolioDataContext } from "./context/PortfolioDataContext";
 import AboutSection from "./components/homepage/about";
@@ -15,12 +15,11 @@ import Skills from "./components/homepage/skills";
 export default function Home() {
   const portfolioData = useContext(PortfolioDataContext);
   const sectionTypes = (portfolioData.sections || []).map(s => s.type);
-
+console.log(sectionTypes.length)
   return (
     <>
-      {sectionTypes
-        ? "Hello World"
-        : (
+      {sectionTypes.length
+        ? (
           <div suppressHydrationWarning>
             {sectionTypes.includes("hero") && <HeroSection />}
             {sectionTypes.includes("about") && <AboutSection />}
@@ -31,6 +30,7 @@ export default function Home() {
             {sectionTypes.includes("contact") && <ContactSection />}
           </div>
         )
+        : "Hello World"
       }
     </>
   )
